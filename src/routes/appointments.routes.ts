@@ -18,7 +18,7 @@ appointmentsRouter.post('/', (request, response) => {
 
     const parsedDate = parseISO(date);
 
-    /* Chamando o services no qual foi desenvolvido, instanciando e recebdno um
+    /* Chamando o services no qual foi desenvolvido, instanciando e recebendo um
     valor do tipo referenciado dentro da classe. */
     const createAppointment = new CreateAppointmentService(
       appointmentsRepositorie,
