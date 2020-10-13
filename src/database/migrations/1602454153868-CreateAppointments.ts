@@ -13,6 +13,7 @@ export default class CreateAppointments1602454153868
             isPrimary: true,
             /* Gerar um id de forma automatica como se fosse um uuid. */
             generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
           },
           {
             name: 'provider',
