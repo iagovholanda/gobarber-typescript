@@ -5,7 +5,7 @@ import Appointment from '../models/Appointment';
 import AppointmentsRepositorie from '../repositories/AppointmentsRepositorie';
 
 interface RequestAppointment {
-  provider: string;
+  provider_id: string;
   date: Date;
 }
 
@@ -13,7 +13,7 @@ class CreateAppointmentService {
   /* Metodo de execução */
   public async execute({
     date,
-    provider,
+    provider_id,
   }: RequestAppointment): Promise<Appointment> {
     /* Libera os metodos para serem utilizado dentro dos services. */
     const appointmentsRepositorie = getCustomRepository(
@@ -32,7 +32,7 @@ class CreateAppointmentService {
 
     /* Cria a instancia */
     const appointment = appointmentsRepositorie.create({
-      provider,
+      provider_id,
       date: appointmentDate,
     });
 
