@@ -2,9 +2,9 @@ import { Router } from 'express';
 
 import CreateUserService from '../services/CreateUserService';
 
-const appointmentsRouter = Router();
+const usersRouter = Router();
 
-appointmentsRouter.post('/', async (request, response) => {
+usersRouter.post('/', async (request, response) => {
   try {
     const { name, email, password } = request.body;
 
@@ -24,4 +24,4 @@ appointmentsRouter.post('/', async (request, response) => {
   }
 });
 
-export default appointmentsRouter;
+export default usersRouter;
